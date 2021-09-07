@@ -1,0 +1,510 @@
+
+.col1{
+    height: 520px;
+}
+
+.col2{
+    height: 520px;
+    background-color: #253652;
+}
+
+@media screen and (max-width: 576px) {
+    .col1{
+        display: none;
+    }
+
+    .col2{
+        padding: 0px;
+    }
+}
+
+.col2 .titleCol2{
+    padding-left: 55px;
+    color: #fff;
+    padding-top: 60px;
+}
+
+.col2 .inpugroupdecal{
+    width: 420px;
+    margin-left: 5px;
+    margin-top: 30px;
+    font-size: 5px;
+}
+
+.col2 .btncol2{
+    width: 330px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.col2 .h6col2{
+    color: #fff;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.col2 .btnpluscategoriecol2{
+    width: 200px;
+    margin-left: 50px;
+}
+
+.col2 .btnpluscategoriecol2Button{
+    background-color: #2f466a;
+    border-color: transparent;
+    color: #57F8F8;
+    transition: 0.3s ease-in-out;
+}
+
+.col2 .btnpluscategoriecol2Button:hover{
+    color: lightgray;
+    background-color: transparent;
+    border-color: lightgray;
+}
+
+.col2 .btnacheurscol2{
+    margin-left: 45%;
+    color: #57F8F8;
+    transition: 0.3s ease-in-out;
+}
+
+.col2 .btnacheurscol2:hover{
+    color: lightgray;
+}
+
+
+.animate-arrow{
+    opacity: 0.3;
+    top: 460px;
+    left: 50%;
+    padding-left: 1px;
+    transform: translateX(50%);
+    height: 30px;
+    width: 30px;
+    border: 2px solid lightcyan;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    position: sticky;
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes arrow{
+    from{transform: translateY(-5px) scaleY(1) rotateY(1deg)}
+    to{transform: translateY(8px) scaleY(1) rotateY(1deg)}
+}
+
+
+.col1-section2{
+    height: 50px;
+    text-align: center;
+}
+
+.col2-section2{
+    height: 20px;
+    text-align: center;
+}
+
+.line{
+    width: 1px;
+    min-height: 55px;
+    margin: 25px auto;
+    background-color: #d8dcee;
+}
+
+/*.row-card{
+    position: relative;
+    top: 170px;
+    left: 100px;
+    width: 900px;
+}*/
+.container3{
+    background-color: rgb(240, 240, 240);
+    padding-top: 30px;
+    margin-top: 200px;
+    height: 600px;
+}
+
+.col1-card{
+    /*position: relative;
+    top: 170px;
+    background-color: blue;*/
+}
+
+.col2-card{
+    /*background-color: black;*/
+}
+
+.col1-card .card1{
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    border-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.col1-card .card1:hover{
+    margin-top: -1px;
+}
+
+.col2-card .card2{
+    width: 80%;
+    height: 100%;
+    margin-right: auto;
+    border-color: transparent;
+    transition: 0.3s ease-in-out;
+    
+}
+.col2-card .card2:hover{
+    margin-top: -1px;
+}
+
+.col3-card .card3{
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-top: 5%;
+    border-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.col3-card .card3:hover{
+    margin-top: 30px;
+}
+
+.col4-card .card4{
+    width: 80%;
+    height: 100%;
+    margin-right: auto;
+    margin-top: 5%;
+    border-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.col4-card .card4:hover{
+    margin-top: 30px;
+}
+
+@media screen and (max-width:992px) {
+    .col1-card .card1{
+        height: 170px;
+        width: auto;
+    }
+    .col2-card .card2{
+        width: auto;
+        margin-top: 30px;
+        height: 170px;
+    }
+    
+    .col3-card .card3{
+        width: auto;
+        margin-top: 30px;
+        height: 300px;
+    }
+    .col4-card .card4{
+        width: auto;
+        margin-top: 30px;
+        height: 200px;
+    }
+    .container3{
+        height: 1000px;
+        background-color: rgb(240, 240, 240);
+    }
+}
+
+.container4{
+    height: 700px;
+    background-color: rgb(235, 235, 235);
+}
+
+.card-group1{
+    width: 80%;
+    height: 100%;
+    margin-left: 32%;
+    transition: 0.3s ease-in-out;
+}
+
+.card-group1:hover{
+    margin-top: -10px;
+}
+
+
+.card-group2{
+    width: 80%;
+    margin-left: 16%;
+    height: 100%;
+}
+
+.card-group2:hover{
+    margin-top: -10px;
+}
+
+.card-group3{
+    width: 70%;
+    height: 100%;
+}
+
+.card-group3:hover{
+    margin-top: -10px;
+}
+
+@media screen and (max-width:992px) {
+    .card-group1{
+        width: 100%;
+        position: relative;
+        right: 32%;
+        bottom: 40px;
+    }
+
+    .card-group2{
+        width: 100%;
+        position: relative;
+        right: 16%;
+        bottom: 20px;
+}
+
+.card-group3{
+    width: auto;
+}
+.container4{
+    height: 1000px;
+    background-color: rgb(235, 235, 235);
+}
+}
+
+.container5{
+    height: 800px;
+    background-color: rgb(245, 245,245);
+}
+
+
+.div-disponible1{
+    height: 80px;
+    width: 80px;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 35%;
+    padding-top: 12px;
+}
+.card-group-disponoble1:hover{
+    margin-top: -10px;
+}
+
+
+.card-group-disponoble2:hover{
+    margin-top: -10px;
+}
+
+
+.card-group-disponoble3:hover{
+    margin-top: -10px;
+}
+
+.card-group-disponible4:hover{
+    margin-top: -10px;
+}
+
+.card-group-disponoble1{
+    height: 95%;
+    width: 88%;
+    margin-left: 45%;
+    border-color: transparent;
+}
+
+.card-group-disponoble2{
+    height: 95%;
+    width: 73%;
+    margin-left: 41%;
+    border-color: transparent;
+}
+
+.card-group-disponoble3{
+    height: 95%;
+    width: 70%;
+    margin-left: 22%;
+    border-color: transparent;
+}
+
+.card-group-disponible4{
+    height: 95%;
+    width: 65%;
+    border-color: transparent;
+}
+
+@media screen and (max-width:992px) {
+
+    .card-group-disponoble1{
+        position: relative;
+        right: 45%;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .card-group-disponoble2{
+        position: relative;
+        right: 41%;
+        width: 100%;
+        margin-bottom: 15px;
+        
+    }
+    
+    .card-group-disponoble3{
+        position: relative;
+        right: 22%;
+        width: 100%;
+        margin-bottom: 15px;
+        
+    }
+    
+    .card-group-disponible4{
+        width: 100%;
+        margin-bottom: 40px;
+    }   
+    
+}
+
+@media screen and (max-width:992px) {
+    .container6{
+        display: none;
+    }
+
+    .container7 .col1-container7{
+        position: absolute;
+        top: 3900px;
+    }
+
+    .container7 .col2-container7{
+        position: absolute;
+        top: 4370px;
+    }
+
+}
+
+.container7 .col2-container7{
+    width: 60%;
+    margin-left: 21%;
+}
+
+@media screen and (max-width:992px) {
+    .container8{
+        position: absolute;
+        top: 4600px;
+    }
+    
+}
+
+.container9{
+    position: absolute;
+    top: 4350px;
+    height: 500px;
+    background-color: #253765;
+}
+
+.container9:hover{
+    background-image: url(https://uploads-ssl.webflow.com/5e3c7c14260abef18b746a7c/5e9ef80943f8320eef637ae6_footer-7.svg);
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:992px){
+    .container9{
+    position: absolute;
+    top: 5200px;
+    height: 500px;
+    background-color: #253765;
+    }
+}
+
+.div-container9{
+    height: 200px;
+    margin-top: 0px;
+    margin-left: 10%;
+    padding: 1px;
+    display: flex;
+
+}
+
+.col1-container9{
+    background-color: transparent;
+}
+.col2-container9{
+    background-color: transparent;
+}
+
+.span-button{
+    position: relative;
+    left: 33%;
+    top: 10%;
+}
+
+.paragraph-container9{
+    position: relative;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+
+.span-button:hover,
+.arrow-footer{
+    padding-right: 3px;
+}
+
+.button-div{
+    border-radius: 50px;
+    background-color: #fff;
+    color: black;
+    border-color: transparent;
+}
+
+.div-container99{
+    display: flex;
+    padding-left: 10%;
+    position: relative;
+    top: 60px;
+}
+
+.div-container99 .evao{
+    color: #bdc9d6;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.div-container99 .anchor1-container9{
+    color: #fff;
+    font-weight: 400;
+}
+
+.div-container99 .paragraph1-col2-container9{
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    float: none;
+}
+
+.div-container99 .paragraph2-col2-container9{
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    float: none;
+}
+
+.div-container99 .image-container9{
+    height: 15px;
+    width: 14px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.div-container99 .evaoo{
+    margin-left: auto;
+    margin-right: 0.3%;
+}
+
+.div-container99 .anchor2-container9{
+    margin-right: 6.5%;
+    color: #fff;
+}
+
