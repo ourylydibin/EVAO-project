@@ -20,12 +20,7 @@ const FormHomepage = (props) => {
   const appel = (valo) =>{
      setSt(stat=valo)
   }
-  //var [statee, setState] = useState(false)
-
-  //const Toggleimagte = () => { 
-    //setSt(!stat)
-     // }
-
+ 
   return (
       <div>
 
