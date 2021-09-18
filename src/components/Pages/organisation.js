@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Row, Col, Carousel, InputGroup, FormControl, Button, Container, Card,
    CardGroup, Accordion} from 'react-bootstrap'
 import "./organisation.css"
@@ -6,11 +6,39 @@ import benin from "./../../assets/images/benin.jpg"
 import canada from "./../../assets/images/canada.jpg"
 import senegal from "./../../assets/images/senegal.jpg"
 import SearchIcon from '@material-ui/icons/Search'
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt'
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 import NAVBAR from "./../../components/NAVBAR"
+import SecondFormHomepage from './SecondFormHomepage'
+import FormHomepage from './FormHomepage'
+import email from "./../../assets/images/email.webp"
 
-const organisation = () => {
+
+const Organisation = () => {
+
+  const [state, setState] = useState(false)
+  var [stateForm, setStateForm] = useState(false)
+  const [stateSecond, setStatesecond] = useState(false)
+  var [values, setStateValues] = useState(null)
+
+  const valeurs = (data)=>{
+    setStateValues(values=data)
+  }
+  
+
+   const toretrievechilddata = (stateFormChild) => {
+        setStateForm(stateForm = stateFormChild);
+        ((stateForm)? setStatesecond(!stateSecond): setStatesecond(stateSecond))
+        }
+   
+   const Toggleimagtsecond = () => {
+    setStatesecond(!stateSecond)
+          }
+    const Toggleimagt = () => {
+        setState(!state);
+        (stateSecond? setStatesecond(!stateSecond): setStatesecond(stateSecond));
+      }
+
     return (
         <div className="hauteurRowsection1">
           <NAVBAR /> 
@@ -96,7 +124,14 @@ const organisation = () => {
                          </div>
                     </div>
                 </Col>
-               </Row>        
+               </Row> 
+              <img src={email} alt="" onClick={Toggleimagt} className= {((state || stateForm) && state)? "hideimage":"image-fixed"}/>
+              {(((state && !stateForm) || stateSecond)? <FormHomepage toggle={Toggleimagt} tr={toretrievechilddata} val={valeurs}/>:"")}
+              {((stateForm && state) ? <SecondFormHomepage second={Toggleimagt} bout={Toggleimagtsecond} valu={values}/>: "")} 
+
+
+
+
     <Container>
   <Row className="justify-content-center">
     <Col sm="12" className="col1-section2">
@@ -344,9 +379,11 @@ style={{height: "160px", backgroundColor: "#fff", marginTop: "100px"}}>
         </h2>
     </Col>
     <Col lg={12}> 
-    <div style={{marginLeft: "43%", marginTop: "20px"}} className="div-button-before-botom">
-          <Button href="ourylydibin" size="lg" style={{borderRadius: "50px", backgroundColor: "#18cdca"}}>
-          Tester gratuitement <ArrowRightAltIcon/></Button> 
+    <div style={{marginLeft: "43%", marginTop: "20px"}}>
+          <Button href="ourylydibin" size="lg"
+           style={{borderRadius: "50px", backgroundColor: "#18cdca",
+            borderColor: "transparent"}} className="tester-gratuitement-1-2">
+          Tester gratuitement <ArrowRightAltIcon className="arrow-tester-gratuit"/></Button> 
     </div>
     </Col>
   </Row>
@@ -408,7 +445,7 @@ style={{height: "160px", backgroundColor: "#fff", marginTop: "100px"}}>
       </Row>
       </div>
   </Container>
-
+  
   <Container fluid className="container8" 
 style={{height: "160px", backgroundColor: "#fff", marginTop: "200px"}}> 
 <Row className="justify-content-center">
@@ -422,15 +459,16 @@ style={{height: "160px", backgroundColor: "#fff", marginTop: "200px"}}>
               borderColor: "transparent", cursor: "context-menu"}}>
                 <strong>réussite</strong></button></p>
             <p style={{marginTop: "1%", fontSize: "20px", marginLeft: "6%"}} >
-              EVAO identifie et qualifie tous les contrats publics pertinents pour vous.</p>
+              AOVIA-X identifie et qualifie tous les contrats publics pertinents pour vous.</p>
             <p style={{marginTop: "1%", fontSize: "20px", marginLeft: "12%"}}>
               Concentrez vous sur ce qui compte: <strong>écrire et gagner</strong>.</p>
         </h2>
     </Col>
     <Col lg={12}> 
-    <div style={{marginLeft: "43%", marginTop: "70px"}} className="div-button-before-botom">
-          <Button href="ourylydibin" size="lg" style={{borderRadius: "50px", backgroundColor: "#18cdca"}}>
-          Tester gratuitement <ArrowRightAltIcon/></Button> 
+    <div style={{marginLeft: "43%", marginTop: "70px", borderColor: "transparent"}} className="div-tester-gratuit">
+          <Button href="ourylydibin" size="lg" style={{borderRadius: "50px",
+           backgroundColor: "#18cdca", borderColor: "transparent"}} className="tester-gratuitement-1-2">
+          Tester gratuitement <ArrowRightAltIcon className="arrow-tester-gratuit"/></Button> 
     </div>
     </Col>
     </div>
@@ -440,35 +478,36 @@ style={{height: "160px", backgroundColor: "#fff", marginTop: "200px"}}>
     <Container fluid className="container9">
       <Row>
         <Col lg={12} className="col1-container9">
-        <div className="paragraph-container9">
-          <p style={{color: "#fff"}}> Découvrez notre solution complète</p>
-        </div>  
-          <div className="div-container9"> 
-            <h3 style={{color: "#fff"}}>AOVIA-X fait partie d'une solution <br/>
-              complète d'automatisation de réponse <br/> aux appels d'offres.</h3>
-              <div className="span-button"><Button href="ourylydibin" size="lg" className="button-div">
-          Tester gratuitement <ArrowRightAltIcon className="arrow-footer"/></Button></div>
-          </div>
+          <p style={{color: "#fff", marginLeft: "10%", marginTop: "15%"}}> Découvrez notre solution complète</p>
+          
+            <span> <h3 style={{color: "#fff", marginLeft: "10%", marginTop: "-1%"}}>
+              AOVIA-X fait partie d'une solution <br/>
+              complète d'automatisation de réponse <br/> aux appels d'offres: <strong>EVAO</strong></h3>
+              <Button href="ourylydibin" className="button-container9"
+              style={{borderRadius: "50px", backgroundColor: "#fff", color: "black", 
+               borderColor: "transparent", height: "12%"}}>
+                Découvrez AOVIA <ArrowRightAltIcon className="arrow-footer"/>
+              </Button></span>
         </Col>
 
         <Col lg={12} className="col2-container9">
-          <div className="div-container99">
+        <div className="div-container99">
             <p className="evao">©2021&nbsp;EVAO&nbsp;Technologies&nbsp;Inc.&nbsp;&nbsp;|&nbsp;&nbsp;<a href="ourylydibin" className="anchor1-container9">légal</a>
             </p>
             <p className="paragraph1-col2-container9">&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="ourylydibin" className="paragraph2-col2-container9">Nouvelles&nbsp;fonctionnalités</a>
             </p><img src="https://uploads-ssl.webflow.com/5e3c7c14260abef18b746a7c/5ebaecf32dfbac82e4753e0e_external-link-grey.svg"
             alt="" className="image-container9" />
-            <p className="evao evaoo">développé au Canada par </p>
+            <p className="evao evaoo">&nbsp;&nbsp;développé&nbsp;au&nbsp;Canada&nbsp;par&nbsp;</p>
             <a href="ourylydibin" className="anchor2-container9">EVAO</a>
 
           </div>
-        </Col>
-      </Row>
-    </Container>
+           </Col>
+         </Row>
+       </Container>
+     </div>
   </div>
-      </div>
     )
 }
 
-export default organisation
+export default Organisation

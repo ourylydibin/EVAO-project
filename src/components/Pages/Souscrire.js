@@ -5,7 +5,7 @@ import "./Souscrire.css"
 const Souscrire = () => {
     return (
         <div>
-            Les souscriptions
+            
         </div>
     )
 }

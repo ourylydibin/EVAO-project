@@ -126,16 +126,6 @@
     height: 600px;
 }
 
-.col1-card{
-    /*position: relative;
-    top: 170px;
-    background-color: blue;*/
-}
-
-.col2-card{
-    /*background-color: black;*/
-}
-
 .col1-card .card1{
     height: 100%;
     width: 80%;
@@ -435,28 +425,15 @@
 }
 
 .span-button{
-    position: relative;
-    left: 33%;
-    top: 10%;
+    position: absolute;
+    top: 50%;
+    left: 76%;
 }
 
 .paragraph-container9{
     position: relative;
     margin-left: 10%;
     margin-top: 10%;
-}
-
-
-.span-button:hover,
-.arrow-footer{
-    padding-right: 3px;
-}
-
-.button-div{
-    border-radius: 50px;
-    background-color: #fff;
-    color: black;
-    border-color: transparent;
 }
 
 .div-container99{
@@ -506,5 +483,64 @@
 .div-container99 .anchor2-container9{
     margin-right: 6.5%;
     color: #fff;
+}
+.col1-container9 .button-container9{
+    margin-top:-120px;
+    margin-left: 80%;
+}
+
+@media screen and (max-width:992px) {   
+.col1-container9 .button-container9{
+    margin-top:10px;
+    margin-left: 10%;
+    }
+}
+
+.button-container9 .arrow-footer{
+    transition: padding-right 0.3s linear;
+}
+
+.button-container9:hover .arrow-footer{
+    padding-right: 4px;
+}
+
+.arrow-tester-gratuit{
+    transition: padding-right 0.3s linear;
+}
+.tester-gratuitement-1-2:hover .arrow-tester-gratuit{
+    padding-right: 4px;
+}
+
+@media screen and (max-width:768px){
+    .div-container99 .evaoo{
+        display: none;
+    }
+    .div-container99 .anchor2-container9{
+        display: none;
+    }
+}
+
+.image-fixed{
+    z-index: 100;
+    position: fixed;
+    right: 91%;
+    top: 78%;
+    height: 90px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:576px) {
+    .image-fixed{
+        z-index: 100;
+        position: fixed;
+        right: 75%;
+        top: 78%;
+        height: 90px;
+        cursor: pointer;
+    }
+}
+
+.hideimage{
+    display: none;
 }
 

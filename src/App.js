@@ -2,7 +2,7 @@ import React from "react"
 import { 
   BrowserRouter as Router, 
   Switch, 
-  Route
+  Route,
 } from "react-router-dom"
 import MarcheBeninois from "./components/Pages/MarcheBeninois"
 import Offre from "./components/Pages/Offre"

@@ -1,0 +1,97 @@
+
+.fomulairetoogl{
+    z-index: 2000;
+    position: fixed;
+    top: 45%;
+    left: 5%;
+    height: 45%;
+    width: 367px;
+    background-color: #fff;
+}
+
+@media screen and (max-width:576px) {
+    .fomulairetoogl{
+        z-index: 2000;
+        position: fixed;
+        top: 45%;
+        left: 5%;
+        height: 45%;
+        width: 367px;
+        background-color: #fff;
+    }    
+}
+
+.header-toggl{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #00b9ee;
+    display: flex;
+}
+
+.arrow-toggl{
+    background-color: #00b9ee !important;
+    height: 40px;
+    margin-left: 10px;
+    border: 1px solid lightcyan !important;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.circle-toggl{
+    background-color: #00b9ee !important;
+    height: 40px;
+    margin-left: 250px;
+    border: 1px solid lightcyan !important;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+
+.div1-toggl{
+    position: absolute;
+    color: #fff;
+    top: 12px;
+    left: 10px;
+    font-size: 22px;
+
+}
+
+
+.div-below-heade{
+    height: 60%;
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.para1{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.para2{
+    font-size: 14px;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.para3{
+    font-size: 14px;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.para4{
+    font-size: 14px;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.para5{
+    font-size: 14px;
+    margin-top: -10px;
+    margin-left: 10px;
+}
