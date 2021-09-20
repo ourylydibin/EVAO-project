@@ -7,10 +7,11 @@
 .lastName{
     width: 300px !important;
     margin-left: 35px !important;
+    margin-top: 10px !important;
 }
 
 .email{
-    margin-top: 15px !important;
+    margin-top: 25px !important;
     width: 300px !important;
     margin-left: 35px !important;
 }
@@ -19,7 +20,7 @@
 .textarea{
     width: 300px !important;
     margin-left: 35px !important;
-    margin-top: 15px !important;
+    margin-top: 25px !important;
     height: 40px !important;
 }
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -13,13 +13,41 @@ import Sinscrire from "./components/Pages/Sinscrire"
 import Souscrire from "./components/Pages/Souscrire"
 import Nomatch from "./components/Pages/Nomatch"
 import organisation from "./components/Pages/organisation"
+import email from "./assets/images/email.webp"
+import SecondFormHomepage from './components/Pages/SecondFormHomepage'
+import FormHomepage from './components/Pages/FormHomepage'
 
 
 
 function App(){
+  const [state, setState] = useState(false)
+  var [stateForm, setStateForm] = useState(false)
+  const [stateSecond, setStatesecond] = useState(false)
+  var [values, setStateValues] = useState(null)
+
+  const valeurs = (data)=>{
+    setStateValues(values=data)
+  }
+  
+
+   const toretrievechilddata = (stateFormChild) => {
+        setStateForm(stateForm = stateFormChild);
+        ((stateForm)? setStatesecond(!stateSecond): setStatesecond(stateSecond))
+        }
+   
+   const Toggleimagtsecond = () => {
+    setStatesecond(!stateSecond)
+          }
+    const Toggleimagt = () => {
+        setState(!state);
+        (stateSecond? setStatesecond(!stateSecond): setStatesecond(stateSecond));
+      }
+
   return (
     <>
-
+              <img src={email} alt="" onClick={Toggleimagt} className= {((state || stateForm) && state)? "hideimage":"image-fixed"}/>
+              {(((state && !stateForm) || stateSecond)? <FormHomepage toggle={Toggleimagt} tr={toretrievechilddata} val={valeurs}/>:"")}
+              {((stateForm && state) ? <SecondFormHomepage second={Toggleimagt} bout={Toggleimagtsecond} valu={values}/>: "")} 
     <Router>
       <Switch>
           <Route exact path="/" component={organisation} />

@@ -13,9 +13,9 @@ import EmailIcon from '@material-ui/icons/Email';
 
 const schema = yup.object().shape({
   firstName: yup.string().required("Veullez remplir ce champs"),
-  lastName: yup.string().required("Veullez remplir ce champs"),
-  textarea: yup.string().required("Veullez remplir ce champs"),
-  email: yup.string().email().required("Veullez remplir ce champs"),
+  password: yup.string().required("Veullez remplir ce champs").matches(
+    /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
+    "Requis: au moins 8 caractères, un majuscule, un nombre et un caratère spécial"),
 });
 
 const Souscrire = () => {
@@ -35,16 +35,14 @@ const Souscrire = () => {
                 validationSchema={schema}
                 onSubmit={(values, {setSubmitting}) => {
                   setTimeout(() => {
-                   // alert(JSON.stringify(values, null, 2));
+                    alert(JSON.stringify(values, null, 2));
                     setSubmitting(false);
                   }, 1000)
                 }
               }
                 initialValues={{
                   firstName: '',
-                  lastName: '',
-                  email: '',
-                  textarea: ''
+                  password: '',
                 }}
               >
                 {({
@@ -63,7 +61,7 @@ const Souscrire = () => {
                   marginLeft: "auto", width: "80%", borderColor: "lightgray"}}>
                   <legend style={{width: "30px", marginBottom: "40px", marginLeft: "10px", fontSize: "15px"}}>Connexion:</legend>
                     <Row className="mb-3">
-                      <Form.Group as={Col} md="4" controlId="validationFormik01" className="firstName">
+                      <Form.Group as={Col} md="4" controlId="validationFormik01" className="firstNam">
                         <Form.Control
                           type="text"
                           name="firstName"
@@ -81,24 +79,24 @@ const Souscrire = () => {
                       
                      
                     <Row>
-                      <Form.Group as={Col} md="4" controlId="validationFormik02" className="email">
+                      <Form.Group as={Col} md="4" controlId="validationFormik02" className="emai">
                         <Form.Control
-                          type="email"
-                          name="email"
+                          type="password"
+                          name="password"
                           placeholder="Mot de passe*"
-                          value={values.email}
+                          value={values.password}
                           onChange={handleChange}
-                          isInvalid={!!errors.email}
+                          isInvalid={!!errors.password}
                         />
                         <Form.Control.Feedback type="invalid">
-                          {errors.email}
+                          {errors.password}
                         </Form.Control.Feedback>
                       </Form.Group>
                     </Row>
                      
                       
                      <div style={{display: "flex"}}> <Button type="submit" 
-                  style={{marginLeft: "10%", marginTop:"85px", marginBottom: "10px"}}
+                  style={{marginLeft: "23%", marginTop:"85px", marginBottom: "10px"}}
                   disabled={isSubmitting}>{isSubmitting ? "Svp attentez": "Connexion"}</Button>
                     <a href="oury" style={{marginTop: "90px", marginLeft: "10px"}}>Mot de passe oublié?</a>
                     </div>

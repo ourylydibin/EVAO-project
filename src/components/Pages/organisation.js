@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Row, Col, Carousel, InputGroup, FormControl, Button, Container, Card,
    CardGroup, Accordion} from 'react-bootstrap'
 import "./organisation.css"
@@ -9,36 +9,12 @@ import SearchIcon from '@material-ui/icons/Search'
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 import NAVBAR from "./../../components/NAVBAR"
-import SecondFormHomepage from './SecondFormHomepage'
-import FormHomepage from './FormHomepage'
-import email from "./../../assets/images/email.webp"
+//import SecondFormHomepage from './SecondFormHomepage'
+//import FormHomepage from './FormHomepage'
+//import email from "./../../assets/images/email.webp"
 
 
 const Organisation = () => {
-
-  const [state, setState] = useState(false)
-  var [stateForm, setStateForm] = useState(false)
-  const [stateSecond, setStatesecond] = useState(false)
-  var [values, setStateValues] = useState(null)
-
-  const valeurs = (data)=>{
-    setStateValues(values=data)
-  }
-  
-
-   const toretrievechilddata = (stateFormChild) => {
-        setStateForm(stateForm = stateFormChild);
-        ((stateForm)? setStatesecond(!stateSecond): setStatesecond(stateSecond))
-        }
-   
-   const Toggleimagtsecond = () => {
-    setStatesecond(!stateSecond)
-          }
-    const Toggleimagt = () => {
-        setState(!state);
-        (stateSecond? setStatesecond(!stateSecond): setStatesecond(stateSecond));
-      }
-
     return (
         <div className="hauteurRowsection1">
           <NAVBAR /> 
@@ -125,10 +101,7 @@ const Organisation = () => {
                     </div>
                 </Col>
                </Row> 
-              <img src={email} alt="" onClick={Toggleimagt} className= {((state || stateForm) && state)? "hideimage":"image-fixed"}/>
-              {(((state && !stateForm) || stateSecond)? <FormHomepage toggle={Toggleimagt} tr={toretrievechilddata} val={valeurs}/>:"")}
-              {((stateForm && state) ? <SecondFormHomepage second={Toggleimagt} bout={Toggleimagtsecond} valu={values}/>: "")} 
-
+      
 
 
 
